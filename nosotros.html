@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros · ZTM Abogados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .nosotros-full {
+            padding: 80px 0;
+        }
 
+        .nosotros-full .historia {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .nosotros-full .historia-texto h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+
+        .nosotros-full .historia-texto h2 span {
+            color: var(--dorado);
+        }
+
+        .nosotros-full .historia-texto p {
+            color: var(--gris-elegante);
+            margin-bottom: 16px;
+        }
+
+        .nosotros-full .historia-imagen img {
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .valor-card {
+            background: var(--gris-claro);
+            padding: 30px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .valor-card:hover {
+            border-color: var(--dorado);
+            transform: translateY(-5px);
+        }
+
+        .valor-card i {
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 16px;
+        }
+
+        .valor-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .valor-card p {
+            color: var(--gris-elegante);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nosotros-full .historia {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50x50/1a2a4a/ffffff?text=ZTM" alt="ZTM Abogados" />
+            <span class="logo-text">ZTM <span>Abogados</span></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn-consulta">Consulta gratuita</a>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- NOSOTROS -->
+<section class="nosotros-full">
+    <div class="container">
+        <h2 class="section-title">Sobre <span>ZTM Abogados</span></h2>
+
+        <div class="historia">
+            <div class="historia-texto">
+                <h2>Nuestra <span>Historia</span></h2>
+                <p><strong>ZTM Abogados</strong> es un estudio legal boliviano fundado en 2011 por los Dres. Agustín Zambrana y Luis Felipe Tirado. En 2020, el Dr. Larry Monasterios se unió como socio, abriendo nuestra oficina en La Paz.</p>
+                <p>Nuestro compromiso: prevenir contingencias y orientar a nuestros clientes en situaciones complejas, con un enfoque personalizado y estratégico.</p>
+                <p>Hoy somos un equipo de profesionales comprometidos con la excelencia y la ética, ofreciendo soluciones legales integrales a empresas y personas.</p>
+            </div>
+            <div class="historia-imagen">
+                <img src="https://via.placeholder.com/500x350/1a2a4a/ffffff?text=Nuestro+Estudio" alt="ZTM Abogados" />
+            </div>
+        </div>
+
+        <h2 class="section-title">Nuestros <span>Valores</span></h2>
+        <div class="valores-grid">
+            <div class="valor-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Confianza</h4>
+                <p>Construimos relaciones duraderas basadas en la transparencia y el respeto.</p>
+            </div>
+            <div class="valor-card">
+                <i class="fas fa-scale-balanced"></i>
+                <h4>Justicia</h4>
+                <p>Defendemos los derechos de nuestros clientes con pasión y ética profesional.</p>
+            </div>
+            <div class="valor-card">
+                <i class="fas fa-handshake"></i>
+                <h4>Compromiso</h4>
+                <p>Nos dedicamos a encontrar la mejor solución legal para cada caso.</p>
+            </div>
+            <div class="valor-card">
+                <i class="fas fa-lightbulb"></i>
+                <h4>Innovación</h4>
+                <p>Actualizamos constantemente nuestras estrategias para ofrecer un servicio de vanguardia.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <h3>ZTM Abogados</h3>
+            <p>Justicia que transforma. Experiencia que confía.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> +591 3 1234567</li>
+                <li><i class="fab fa-whatsapp"></i> +591 77777777</li>
+                <li><i class="fas fa-envelope"></i> info@ztm-abogados.com</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Redes sociales</h4>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ZTM Abogados. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/59177777777" class="btn-whatsapp-flotante" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias · ZTM Abogados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .noticias-full {
+            padding: 80px 0;
+        }
 
+        .noticias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .noticia-card {
+            background: var(--gris-claro);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .noticia-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px -8px rgba(0,0,0,0.1);
+            border-color: var(--dorado);
+        }
+
+        .noticia-card .imagen {
+            height: 200px;
+            background: var(--azul-marino);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .noticia-card .contenido {
+            padding: 24px;
+        }
+
+        .noticia-card .contenido .fecha {
+            color: var(--dorado);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .noticia-card .contenido h3 {
+            font-size: 1.3rem;
+            margin: 8px 0 12px;
+        }
+
+        .noticia-card .contenido p {
+            color: var(--gris-elegante);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .noticia-card .contenido a {
+            color: var(--azul-marino);
+            font-weight: 600;
+        }
+
+        .noticia-card .contenido a:hover {
+            color: var(--dorado);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50x50/1a2a4a/ffffff?text=ZTM" alt="ZTM Abogados" />
+            <span class="logo-text">ZTM <span>Abogados</span></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html" class="active">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn-consulta">Consulta gratuita</a>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- NOTICIAS -->
+<section class="noticias-full">
+    <div class="container">
+        <h2 class="section-title">Noticias y <span>Actualidad Legal</span></h2>
+        <p class="section-subtitle">Mantente informado sobre los cambios y novedades del ámbito legal.</p>
+
+        <div class="noticias-grid">
+            <!-- Noticia 1 -->
+            <div class="noticia-card">
+                <div class="

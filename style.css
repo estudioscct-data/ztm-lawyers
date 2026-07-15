@@ -395,3 +395,72 @@ a {
         font-size: 2.5rem;
     }
 }
+/* ===== MISIÓN Y VISIÓN ===== */
+.mision-vision {
+    padding: 60px 0;
+    background: var(--gris-claro);
+    border-radius: 28px;
+    margin: 40px 0;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mv-card {
+    background: var(--blanco);
+    padding: 40px 32px;
+    border-radius: 28px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border-left: 6px solid var(--dorado);
+    transition: 0.3s;
+}
+
+.mv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px -12px rgba(0,0,0,0.15);
+}
+
+.mv-card .mv-icon {
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin-bottom: 16px;
+}
+
+.mv-card h3 {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+    color: var(--azul-marino);
+}
+
+.mv-card p {
+    color: var(--gris-elegante);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.mv-card.mision {
+    border-left-color: var(--azul-marino);
+}
+
+.mv-card.vision {
+    border-left-color: var(--dorado);
+}
+
+@media (max-width: 768px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mv-card {
+        padding: 28px 20px;
+    }
+
+    .mv-card h3 {
+        font-size: 1.5rem;
+    }
+}

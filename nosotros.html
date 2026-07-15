@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
+        /* ===== ESTILOS ADICIONALES PARA NOSOTROS ===== */
         .nosotros-full {
             padding: 80px 0;
         }
@@ -37,8 +38,64 @@
         .nosotros-full .historia-imagen img {
             border-radius: 24px;
             box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+            width: 100%;
+            height: auto;
         }
 
+        /* ===== MISIÓN Y VISIÓN ===== */
+        .mision-vision {
+            padding: 60px 0;
+            background: var(--gris-claro);
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .mv-card {
+            background: var(--blanco);
+            padding: 40px 32px;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border-left: 6px solid var(--dorado);
+            transition: 0.3s;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px -12px rgba(0,0,0,0.15);
+        }
+
+        .mv-card .mv-icon {
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 16px;
+        }
+
+        .mv-card h3 {
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 12px;
+            color: var(--azul-marino);
+        }
+
+        .mv-card p {
+            color: var(--gris-elegante);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .mv-card.mision {
+            border-left-color: var(--azul-marino);
+        }
+
+        .mv-card.vision {
+            border-left-color: var(--dorado);
+        }
+
+        /* ===== VALORES ===== */
         .valores-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -80,12 +137,25 @@
             .nosotros-full .historia {
                 grid-template-columns: 1fr;
             }
+
+            .mv-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .mv-card {
+                padding: 28px 20px;
+            }
+
+            .mv-card h3 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header class="header">
     <div class="container header-container">
         <div class="logo">
@@ -108,32 +178,13 @@
         </div>
     </div>
 </header>
-<!-- ===== MISIÓN Y VISIÓN ===== -->
-<div class="mision-vision">
-    <div class="container">
-        <div class="mv-grid">
-            <div class="mv-card mision">
-                <div class="mv-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
-                <h3>Misión</h3>
-                <p>Prestar servicios legales especializados con los más altos estándares en las áreas del Derecho Societario, Laboral, Civil, Penal, Cooperativo, Educativo, Propiedad Intelectual y Arbitraje y Conciliación, Aduanero, Tributario y Administrativos. Brindando una asesoría personalizada y eficiente dirigida no solo a sociedades comerciales sino también personas naturales, cooperativas, asociaciones y sociedades civiles, por medio de profesionales capacitados, responsables y promover la honestidad para estar dispuestos a brindar las mejores soluciones y alternativas para el cliente.</p>
-            </div>
-            <div class="mv-card vision">
-                <div class="mv-icon">
-                    <i class="fas fa-eye"></i>
-                </div>
-                <h3>Visión</h3>
-                <p>Posicionarnos como la firma de abogados líder a nivel nacional con prestigio a nivel internacional, creciendo conjuntamente con nuestros clientes y siendo partícipes del desarrollo profesional de los integrantes de nuestro gran equipo de trabajo.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- NOSOTROS -->
+
+<!-- ===== SECCIÓN NOSOTROS ===== -->
 <section class="nosotros-full">
     <div class="container">
         <h2 class="section-title">Sobre <span>ZTM Abogados</span></h2>
 
+        <!-- HISTORIA -->
         <div class="historia">
             <div class="historia-texto">
                 <h2>Nuestra <span>Historia</span></h2>
@@ -146,7 +197,30 @@
             </div>
         </div>
 
-        <h2 class="section-title">Nuestros <span>Valores</span></h2>
+        <!-- ===== MISIÓN Y VISIÓN ===== -->
+        <div class="mision-vision">
+            <div class="container" style="padding: 0;">
+                <div class="mv-grid">
+                    <div class="mv-card mision">
+                        <div class="mv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Misión</h3>
+                        <p>Prestar servicios legales especializados con los más altos estándares en las áreas del Derecho Societario, Laboral, Civil, Penal, Cooperativo, Educativo, Propiedad Intelectual y Arbitraje y Conciliación, Aduanero, Tributario y Administrativos. Brindando una asesoría personalizada y eficiente dirigida no solo a sociedades comerciales sino también personas naturales, cooperativas, asociaciones y sociedades civiles, por medio de profesionales capacitados, responsables y promover la honestidad para estar dispuestos a brindar las mejores soluciones y alternativas para el cliente.</p>
+                    </div>
+                    <div class="mv-card vision">
+                        <div class="mv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Visión</h3>
+                        <p>Posicionarnos como la firma de abogados líder a nivel nacional con prestigio a nivel internacional, creciendo conjuntamente con nuestros clientes y siendo partícipes del desarrollo profesional de los integrantes de nuestro gran equipo de trabajo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VALORES -->
+        <h2 class="section-title" style="margin-top: 60px;">Nuestros <span>Valores</span></h2>
         <div class="valores-grid">
             <div class="valor-card">
                 <i class="fas fa-shield-alt"></i>
@@ -172,7 +246,7 @@
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container footer-container">
         <div class="footer-col">
@@ -212,6 +286,7 @@
     </div>
 </footer>
 
+<!-- ===== WHATSAPP FLOTANTE ===== -->
 <a href="https://wa.me/59177777777" class="btn-whatsapp-flotante" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>

@@ -42,3 +42,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// ===== CONTADOR DINÁMICO (ANIMACIÓN AL SCROLL) =====
+document.addEventListener('DOMContentLoaded', function() {
+    const contadores = document.querySelectorAll('.estadistica-numero');
+    const velocidad = 150; // Velocidad de animación (menor = más rápido)
+
+    // Función para animar un contador
+    function animarContador(elemento) {
+        const target = parseInt(elemento.dataset.target);
+        const incremento = Math.ceil(target / velocidad);
+        let actual = 0;
+
+        const intervalo = setInterval(() => {
+            actual += incremento;
+            if (actual >= target) {
+                actual = target;
+                clearInterval(intervalo);
+            }
+            elemento.textContent = actual;
+        }, 20);
+    }
+
+    // Configurar Intersection Observer para activar al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const contador = entry.target;
+                // Si aún no se ha animado (no tiene clase 'contado')
+                if (!contador.classList.contains('contado')) {
+                    contador.classList.add('contado');
+                    animarContador(contador);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Observar cada contador
+    contadores.forEach(contador => observer.observe(contador));
+});

@@ -3,82 +3,108 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros · ZTM Abogados</title>
+    <title>Contacto · ZTM Abogados</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        .nosotros-full {
+        .contacto-full {
             padding: 80px 0;
         }
 
-        .nosotros-full .historia {
+        .contacto-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            align-items: center;
-            margin-bottom: 60px;
+            background: var(--blanco);
+            padding: 48px;
+            border-radius: 32px;
+            box-shadow: 0 12px 30px -8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
         }
 
-        .nosotros-full .historia-texto h2 {
+        .contacto-info h2 {
             font-size: 2.2rem;
             margin-bottom: 16px;
         }
 
-        .nosotros-full .historia-texto h2 span {
+        .contacto-info h2 span {
             color: var(--dorado);
         }
 
-        .nosotros-full .historia-texto p {
+        .contacto-info p {
             color: var(--gris-elegante);
-            margin-bottom: 16px;
+            margin-bottom: 30px;
         }
 
-        .nosotros-full .historia-imagen img {
-            border-radius: 24px;
-            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+        .contacto-detalle {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
         }
 
-        .valores-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .contacto-detalle i {
+            font-size: 1.3rem;
+            color: var(--dorado);
+            width: 28px;
         }
 
-        .valor-card {
-            background: var(--gris-claro);
-            padding: 30px;
-            border-radius: 24px;
-            text-align: center;
+        .contacto-detalle strong {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--azul-marino);
+        }
+
+        .contacto-detalle span {
+            color: var(--gris-elegante);
+        }
+
+        .contacto-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contacto-form input,
+        .contacto-form select,
+        .contacto-form textarea {
+            padding: 14px;
             border: 1px solid #e2e8f0;
-            transition: 0.3s;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.95rem;
         }
 
-        .valor-card:hover {
+        .contacto-form input:focus,
+        .contacto-form select:focus,
+        .contacto-form textarea:focus {
+            outline: none;
             border-color: var(--dorado);
-            transform: translateY(-5px);
         }
 
-        .valor-card i {
-            font-size: 2.5rem;
-            color: var(--dorado);
-            margin-bottom: 16px;
+        .contacto-form button {
+            border: none;
+            cursor: pointer;
         }
 
-        .valor-card h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
+        .mapa-container {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px -8px rgba(0,0,0,0.1);
         }
 
-        .valor-card p {
-            color: var(--gris-elegante);
-            font-size: 0.9rem;
+        .mapa-container iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+            display: block;
         }
 
         @media (max-width: 768px) {
-            .nosotros-full .historia {
+            .contacto-grid {
                 grid-template-columns: 1fr;
+                padding: 24px;
             }
         }
     </style>
@@ -97,9 +123,9 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
-                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
             </ul>
         </nav>
         <a href="contacto.html" class="btn-consulta">Consulta gratuita</a>
@@ -109,45 +135,72 @@
     </div>
 </header>
 
-<!-- NOSOTROS -->
-<section class="nosotros-full">
+<!-- CONTACTO -->
+<section class="contacto-full">
     <div class="container">
-        <h2 class="section-title">Sobre <span>ZTM Abogados</span></h2>
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-subtitle">Déjanos tus datos y te ayudaremos a resolver tu caso.</p>
 
-        <div class="historia">
-            <div class="historia-texto">
-                <h2>Nuestra <span>Historia</span></h2>
-                <p><strong>ZTM Abogados</strong> es un estudio legal boliviano fundado en 2011 por los Dres. Agustín Zambrana y Luis Felipe Tirado. En 2020, el Dr. Larry Monasterios se unió como socio, abriendo nuestra oficina en La Paz.</p>
-                <p>Nuestro compromiso: prevenir contingencias y orientar a nuestros clientes en situaciones complejas, con un enfoque personalizado y estratégico.</p>
-                <p>Hoy somos un equipo de profesionales comprometidos con la excelencia y la ética, ofreciendo soluciones legales integrales a empresas y personas.</p>
+        <div class="contacto-grid">
+            <div class="contacto-info">
+                <h2>¿Necesitas <span>asesoría legal</span>?</h2>
+                <p>Contáctanos y te ayudaremos a resolver tu caso con la mejor estrategia.</p>
+
+                <div class="contacto-detalle">
+                    <i class="fas fa-phone"></i>
+                    <div><strong>Teléfono</strong><span>+591 3 1234567</span></div>
+                </div>
+                <div class="contacto-detalle">
+                    <i class="fab fa-whatsapp"></i>
+                    <div><strong>WhatsApp</strong><span>+591 77777777</span></div>
+                </div>
+                <div class="contacto-detalle">
+                    <i class="fas fa-envelope"></i>
+                    <div><strong>Email</strong><span>info@ztm-abogados.com</span></div>
+                </div>
+                <div class="contacto-detalle">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Oficina</strong><span>Santa Cruz · La Paz</span></div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="https://wa.me/59177777777" class="btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+                    </a>
+                </div>
             </div>
-            <div class="historia-imagen">
-                <img src="https://via.placeholder.com/500x350/1a2a4a/ffffff?text=Nuestro+Estudio" alt="ZTM Abogados" />
+
+            <div class="contacto-form">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Tu nombre completo" required />
+                    <input type="email" placeholder="Tu correo electrónico" required />
+                    <input type="tel" placeholder="Tu teléfono" />
+                    <select required>
+                        <option value="">¿En qué área necesitas asesoría?</option>
+                        <option>Derecho Penal</option>
+                        <option>Derecho Corporativo</option>
+                        <option>Derecho de Familia</option>
+                        <option>Derecho Laboral</option>
+                        <option>Derecho Agrario</option>
+                        <option>Derecho Administrativo</option>
+                    </select>
+                    <textarea rows="4" placeholder="Cuéntanos tu caso (brevemente)..."></textarea>
+                    <button type="submit" class="btn-primary">Enviar consulta</button>
+                </form>
             </div>
         </div>
 
-        <h2 class="section-title">Nuestros <span>Valores</span></h2>
-        <div class="valores-grid">
-            <div class="valor-card">
-                <i class="fas fa-shield-alt"></i>
-                <h4>Confianza</h4>
-                <p>Construimos relaciones duraderas basadas en la transparencia y el respeto.</p>
-            </div>
-            <div class="valor-card">
-                <i class="fas fa-scale-balanced"></i>
-                <h4>Justicia</h4>
-                <p>Defendemos los derechos de nuestros clientes con pasión y ética profesional.</p>
-            </div>
-            <div class="valor-card">
-                <i class="fas fa-handshake"></i>
-                <h4>Compromiso</h4>
-                <p>Nos dedicamos a encontrar la mejor solución legal para cada caso.</p>
-            </div>
-            <div class="valor-card">
-                <i class="fas fa-lightbulb"></i>
-                <h4>Innovación</h4>
-                <p>Actualizamos constantemente nuestras estrategias para ofrecer un servicio de vanguardia.</p>
-            </div>
+        <!-- MAPA REAL DE ZTM ABOGADOS -->
+        <div class="mapa-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.951552495935!2d-63.1989593!3d-17.793973899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e81e9ed138fd%3A0x728d16c9139f840a!2sZTM%20Abogados%20Asociados%20Soc.%20Civ.!5e0!3m2!1ses-419!2sbo!4v1784083257646!5m2!1ses-419!2sbo" 
+                width="100%" 
+                height="380" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
         </div>
     </div>
 </section>

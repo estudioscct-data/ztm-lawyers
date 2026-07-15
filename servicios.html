@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios · ZTM Abogados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .servicios-full {
+            padding: 80px 0;
+        }
 
+        .servicios-full .servicio-detalle {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+            background: var(--gris-claro);
+            padding: 40px;
+            border-radius: 24px;
+        }
+
+        .servicios-full .servicio-detalle:nth-child(even) {
+            direction: rtl;
+        }
+
+        .servicios-full .servicio-detalle:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .servicio-detalle-texto h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .servicio-detalle-texto h3 span {
+            color: var(--dorado);
+        }
+
+        .servicio-detalle-texto ul {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .servicio-detalle-texto ul li {
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .servicio-detalle-texto ul li i {
+            color: var(--dorado);
+        }
+
+        .servicio-detalle-imagen img {
+            border-radius: 20px;
+            box-shadow: 0 12px 30px -8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .servicios-full .servicio-detalle {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+
+            .servicios-full .servicio-detalle:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50x50/1a2a4a/ffffff?text=ZTM" alt="ZTM Abogados" />
+            <span class="logo-text">ZTM <span>Abogados</span></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn-consulta">Consulta gratuita</a>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- SERVICIOS COMPLETOS -->
+<section class="servicios-full">
+    <div class="container">
+        <h2 class="section-title">Nuestras <span>Áreas de Práctica</span></h2>
+        <p class="section-subtitle">Conoce en detalle cada una de nuestras especialidades legales.</p>
+
+        <!-- Servicio 1 -->
+        <div class="servicio-detalle">
+            <div class="servicio-detalle-texto">
+                <h3>⚖️ <span>Derecho Penal</span></h3>
+                <p>Defensa penal estratégica para personas y empresas. Litigio en todas las instancias judiciales.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Defensa en procesos penales</li>
+                    <li><i class="fas fa-check-circle"></i> Recursos de amparo y hábeas corpus</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría en delitos económicos</li>
+                </ul>
+            </div>
+            <div class="servicio-detalle-imagen">
+                <img src="https://via.placeholder.com/400x250/1a2a4a/ffffff?text=Derecho+Penal" alt="Derecho Penal" />
+            </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="servicio-detalle">
+            <div class="servicio-detalle-texto">
+                <h3>🏢 <span>Derecho Corporativo</span></h3>
+                <p>Asesoría integral para empresas: cumplimiento normativo, contratos y gobierno corporativo.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Constitución y formalización de empresas</li>
+                    <li><i class="fas fa-check-circle"></i> Contratos comerciales y societarios</li>
+                    <li><i class="fas fa-check-circle"></i> Due diligence y fusiones</li>
+                </ul>
+            </div>
+            <div class="servicio-detalle-imagen">
+                <img src="https://via.placeholder.com/400x250/1a2a4a/ffffff?text=Derecho+Corporativo" alt="Derecho Corporativo" />
+            </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="servicio-detalle">
+            <div class="servicio-detalle-texto">
+                <h3>👨‍👩‍👧‍👦 <span>Derecho de Familia</span></h3>
+                <p>Mediación y representación en procesos familiares con enfoque humano y estratégico.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Divorcios y separaciones</li>
+                    <li><i class="fas fa-check-circle"></i> Custodia y régimen de visitas</li>
+                    <li><i class="fas fa-check-circle"></i> Sucesiones y herencias</li>
+                </ul>
+            </div>
+            <div class="servicio-detalle-imagen">
+                <img src="https://via.placeholder.com/400x250/1a2a4a/ffffff?text=Derecho+Familia" alt="Derecho de Familia" />
+            </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="servicio-detalle">
+            <div class="servicio-detalle-texto">
+                <h3>💼 <span>Derecho Laboral</span></h3>
+                <p>Asesoría a empresas y trabajadores en materia laboral y seguridad social.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Contratos de trabajo y despidos</li>
+                    <li><i class="fas fa-check-circle"></i> Beneficios sociales y vacaciones</li>
+                    <li><i class="fas fa-check-circle"></i> Procesos judiciales laborales</li>
+                </ul>
+            </div>
+            <div class="servicio-detalle-imagen">
+                <img src="https://via.placeholder.com/400x250/1a2a4a/ffffff?text=Derecho+Laboral" alt="Derecho Laboral" />
+            </div>
+        </div>
+
+        <!-- Servicio 5 -->
+        <div class="servicio-detalle">
+            <div class="servicio-detalle-texto">
+                <h3>🌾 <span>Derecho Agrario</span></h3>
+                <p>Asesoría en temas de propiedad rural, tierras y recursos naturales.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Regularización de tierras</li>
+                    <li><i class="fas fa-check-circle"></i> Contratos agrarios</li>
+                    <li><i class="fas fa-check-circle"></i> Conflictos de propiedad rural</li>
+                </ul>
+            </div>
+            <div class="servicio-detalle-imagen">
+                <img src="https://via.placeholder.com/400x250/1a2a4a/ffffff?text=Derecho+Agrario" alt="Derecho Agrario" />
+            </div>
+        </div>
+
+        <!-- Servicio 6 -->
+        <div class="servicio-detalle">
+            <div class="servicio-detalle-texto">
+                <h3>🏛️ <span>Derecho Administrativo</span></h3>
+                <p>Asesoría en procedimientos administrativos y regulatorios.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Procedimientos administrativos</li>
+                    <li><i class="fas fa-check-circle"></i> Contrataciones públicas</li>
+                    <li><i class="fas fa-check-circle"></i> Licencias y permisos</li>
+                </ul>
+            </div>
+            <div class="servicio-detalle-imagen">
+                <img src="https://via.placeholder.com/400x250/1a2a4a/ffffff?text=Derecho+Administrativo" alt="Derecho Administrativo" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <h3>ZTM Abogados</h3>
+            <p>Justicia que transforma. Experiencia que confía.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>

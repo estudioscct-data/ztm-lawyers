@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipo · ZTM Abogados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .equipo-full {
+            padding: 80px 0;
+        }
 
+        .filtros {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filtro-btn {
+            background: var(--blanco);
+            border: 1px solid #e2e8f0;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filtro-btn:hover {
+            border-color: var(--azul-marino);
+        }
+
+        .filtro-btn.active {
+            background: var(--azul-marino);
+            color: var(--blanco);
+            border-color: var(--azul-marino);
+        }
+
+        .abogados-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .abogado-card {
+            background: var(--blanco);
+            padding: 24px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .abogado-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px -8px rgba(0,0,0,0.1);
+            border-color: var(--dorado);
+        }
+
+        .abogado-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 3px solid var(--dorado);
+        }
+
+        .abogado-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .abogado-card .especialidad {
+            color: var(--dorado);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .abogado-card .experiencia {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--gris-elegante);
+            margin: 4px 0 12px;
+        }
+
+        .abogado-card .descripcion {
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .abogado-card .links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .abogado-card .links a {
+            color: var(--azul-marino);
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .abogado-card .links a:hover {
+            color: var(--dorado);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50x50/1a2a4a/ffffff?text=ZTM" alt="ZTM Abogados" />
+            <span class="logo-text">ZTM <span>Abogados</span></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html" class="active">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn-consulta">Consulta gratuita</a>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- EQUIPO COMPLETO -->
+<section class="equipo-full">
+    <div class="container">
+        <h2 class="section-title">Nuestro <span>Equipo Legal</span></h2>
+        <p class="section-subtitle">Encuentra al abogado especialista en tu caso.</p>
+
+        <!-- FILTROS -->
+        <div class="filtros">
+            <button class="filtro-btn active" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="penal">Penal</button>
+            <button class="filtro-btn" data-filtro="corporativo">Corporativo</button>
+            <button class="filtro-btn" data-filtro="familia">Familia</button>
+            <button class="filtro-btn" data-filtro="laboral">Laboral</button>
+            <button class="filtro-btn" data-filtro="agrario">Agrario</button>
+        </div>
+
+        <div class="abogados-grid" id="abogadosGrid">
+            <!-- Tarjeta 1 -->
+            <div class="abogado-card" data-especialidad="corporativo">
+                <img src="https://via.placeholder.com/120x120/1a2a4a/ffffff?text=AZ" alt="Agustín Zambrana" />
+                <h3>Dr. Agustín Zambrana Arze</h3>
+                <span class="especialidad">Derecho de los Negocios</span>
+                <span class="experiencia">14 años de experiencia</span>
+                <p class="descripcion">Especialista en asesoría corporativa y lobby. Socio fundador.</p>
+                <div class="links">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:agustin@ztm-abogados.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="abogado-card" data-especialidad="penal">
+                <img src="https://via.placeholder.com/120x120/1a2a4a/ffffff?text=LT" alt="Luis Tirado" />
+                <h3>Dr. Luis Felipe Tirado Rúa</h3>
+                <span class="especialidad">Derecho Constitucional</span>
+                <span class="experiencia">12 años de experiencia</span>
+                <p class="descripcion">Máster en Derecho Constitucional. Socio fundador.</p>
+                <div class="links">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:luis@ztm-abogados.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="abogado-card" data-especialidad="familia">
+                <img src="https://via.placeholder.com/120x120/1a2a4a/ffffff?text=LM" alt="Larry Monasterios" />
+                <h3>Dr. Larry Monasterios Torrico</h3>
+                <span class="especialidad">Derecho de Familia</span>
+                <span class="experiencia">10 años de experiencia</span>
+                <p class="descripcion">Especialista en mediación familiar y divorcios. Socio en La Paz.</p>
+                <div class="links">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:larry@ztm-abogados.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Añade más abogados según sea necesario -->
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <h3>ZTM Abogados</h3>
+            <p>Justicia que transforma. Experiencia que confía.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> +591 3 1234567</li>
+                <li><i class="fab fa-whatsapp"></i> +591 77777777</li>
+                <li><i class="fas fa-envelope"></i> info@ztm-abogados.com</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Redes sociales</h4>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ZTM Abogados. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/59177777777" class="btn-whatsapp-flotante" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

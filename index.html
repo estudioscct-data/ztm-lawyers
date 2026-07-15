@@ -1,1 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio · ZTM Abogados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* ===== HERO ===== */
+        .hero {
+            padding: 80px 0;
+            background: var(--gris-claro);
+        }
 
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            background: var(--dorado);
+            color: var(--blanco);
+            padding: 4px 16px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--dorado);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--gris-elegante);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image img {
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.2);
+        }
+
+        /* ===== SERVICIOS DESTACADOS ===== */
+        .servicios-destacados {
+            padding: 80px 0;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .servicio-card {
+            background: var(--gris-claro);
+            padding: 30px;
+            border-radius: 24px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px -8px rgba(0,0,0,0.1);
+            border-color: var(--dorado);
+        }
+
+        .servicio-card i {
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 16px;
+        }
+
+        .servicio-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .servicio-card p {
+            color: var(--gris-elegante);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .servicio-link {
+            color: var(--azul-marino);
+            font-weight: 600;
+        }
+
+        .servicio-link:hover {
+            color: var(--dorado);
+        }
+
+        /* ===== CARRUSEL DE CLIENTES ===== */
+        .clientes {
+            padding: 60px 0;
+            background: var(--gris-claro);
+            overflow: hidden;
+        }
+
+        .clientes-track {
+            display: flex;
+            gap: 40px;
+            animation: scrollClientes 20s linear infinite;
+            width: max-content;
+        }
+
+        .clientes-track img {
+            height: 60px;
+            width: auto;
+            filter: grayscale(1);
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        .clientes-track img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        @keyframes scrollClientes {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .clientes-wrapper {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+        }
+
+        /* ===== EQUIPO DESTACADO ===== */
+        .equipo-destacado {
+            padding: 80px 0;
+        }
+
+        .equipo-destacado-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .abogado-mini {
+            text-align: center;
+            background: var(--blanco);
+            padding: 24px;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .abogado-mini img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px;
+            border: 3px solid var(--dorado);
+        }
+
+        .abogado-mini h4 {
+            font-size: 1rem;
+        }
+
+        .abogado-mini .especialidad {
+            color: var(--dorado);
+            font-size: 0.8rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .clientes-track img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50x50/1a2a4a/ffffff?text=ZTM" alt="ZTM Abogados" />
+            <span class="logo-text">ZTM <span>Abogados</span></span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="contacto.html" class="btn-consulta">Consulta gratuita</a>
+        <div class="menu-icon" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <span class="hero-badge">Estudio Legal</span>
+            <h1>Justicia que transforma.<br /><span>Experiencia que confía.</span></h1>
+            <p>Más de 500 casos exitosos. Un equipo de abogados especializados en derecho penal, corporativo, familiar y laboral.</p>
+            <div class="hero-buttons">
+                <a href="contacto.html" class="btn-primary">Agenda tu consulta</a>
+                <a href="equipo.html" class="btn-secondary">Conoce a nuestros abogados</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/500x400/1a2a4a/ffffff?text=Justicia" alt="Justicia" />
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS DESTACADOS -->
+<section class="servicios-destacados">
+    <div class="container">
+        <h2 class="section-title">Áreas de <span>Práctica</span></h2>
+        <p class="section-subtitle">Especialistas en cada rama del derecho para brindarte la mejor asesoría.</p>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <i class="fas fa-gavel"></i>
+                <h3>Derecho Penal</h3>
+                <p>Defensa penal y litigio estratégico.</p>
+                <a href="servicios.html" class="servicio-link">Ver más →</a>
+            </div>
+            <div class="servicio-card">
+                <i class="fas fa-building"></i>
+                <h3>Derecho Corporativo</h3>
+                <p>Asesoría empresarial y cumplimiento normativo.</p>
+                <a href="servicios.html" class="servicio-link">Ver más →</a>
+            </div>
+            <div class="servicio-card">
+                <i class="fas fa-home"></i>
+                <h3>Derecho de Familia</h3>
+                <p>Mediación familiar, divorcios y sucesiones.</p>
+                <a href="servicios.html" class="servicio-link">Ver más →</a>
+            </div>
+            <div class="servicio-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Derecho Laboral</h3>
+                <p>Asesoría a empresas y trabajadores.</p>
+                <a href="servicios.html" class="servicio-link">Ver más →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CARRUSEL DE CLIENTES -->
+<section class="clientes">
+    <div class="container">
+        <h2 class="section-title">Empresas que <span>confían en nosotros</span></h2>
+        <div class="clientes-wrapper">
+            <div class="clientes-track">
+                <!-- Duplica los logos para efecto infinito -->
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+1" alt="Cliente 1" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+2" alt="Cliente 2" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+3" alt="Cliente 3" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+4" alt="Cliente 4" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+5" alt="Cliente 5" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+6" alt="Cliente 6" />
+                <!-- Repetición para el loop -->
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+1" alt="Cliente 1" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+2" alt="Cliente 2" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+3" alt="Cliente 3" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+4" alt="Cliente 4" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+5" alt="Cliente 5" />
+                <img src="https://via.placeholder.com/150x60/cccccc/1a2a4a?text=Logo+6" alt="Cliente 6" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EQUIPO DESTACADO -->
+<section class="equipo-destacado">
+    <div class="container">
+        <h2 class="section-title">Nuestro <span>Equipo</span></h2>
+        <div class="equipo-destacado-grid">
+            <div class="abogado-mini">
+                <img src="https://via.placeholder.com/100x100/1a2a4a/ffffff?text=AZ" alt="Agustín Zambrana" />
+                <h4>Dr. Agustín Zambrana</h4>
+                <span class="especialidad">Derecho de los Negocios</span>
+            </div>
+            <div class="abogado-mini">
+                <img src="https://via.placeholder.com/100x100/1a2a4a/ffffff?text=LT" alt="Luis Tirado" />
+                <h4>Dr. Luis Felipe Tirado</h4>
+                <span class="especialidad">Derecho Constitucional</span>
+            </div>
+            <div class="abogado-mini">
+                <img src="https://via.placeholder.com/100x100/1a2a4a/ffffff?text=LM" alt="Larry Monasterios" />
+                <h4>Dr. Larry Monasterios</h4>
+                <span class="especialidad">Derecho de Familia</span>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="equipo.html" class="btn-primary">Ver equipo completo →</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <h3>ZTM Abogados</h3>
+            <p>Justicia que transforma. Experiencia que confía.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+                <li><i class="fas fa-phone"></i> +591 3 1234567</li>
+                <li><i class="fab fa-whatsapp"></i> +591 77777777</li>
+                <li><i class="fas fa-envelope"></i> info@ztm-abogados.com</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Redes sociales</h4>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 ZTM Abogados. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/59177777777" class="btn-whatsapp-flotante" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
